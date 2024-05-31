@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Put your description here.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <base href="/">
+  <!--
+  <base href="/chachachat/">
+  <base href="/chachachats/">
+  -->
+<style>
+    html, body {
+      height: 100%;  /* Asegura que el html y body ocupen toda la altura */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;  /* Dirección de flex para que el contenido se organice verticalmente */
+    }
+    #app {
+      flex: 1;  /* Hace que el #app se expanda para ocupar todo el espacio disponible */
+      display: flex;  /* Usa flexbox para facilitar el centrado y la expansión */
+      justify-content: center;  /* Centra el contenido horizontalmente */
+      align-items: center;  /* Centra el contenido verticalmente */
+      width: 100%;  /* Asegura que #app ocupe el ancho completo */
+    }
+  </style>
+
+  <title>chato-ui</title>
+    <script>
+      var process = { env: { NODE_ENV: 'development' } };
+      //window.chachachatEndpoint = 'http://localhost:3003/api/config/6ba19572-394d-4f5c-9cfa-c138778643cf';
+  </script>
+</head>
+
+<body>
+  <div id="app">
+    <chato-ui id="chatoComponent"></chato-ui>
+
+</div>
+
+  <script type="module" src="./src/chato-ui.js"></script>
+</body>
+<script>
+  /*
+  document.addEventListener('DOMContentLoaded', () => {
+    const chatoUI = document.getElementById('chatoComponent');
+    const config = {
+      user: "Lucas",
+      color: "#fhtyur",
+      icon: "fa fa-user",
+      variables: { variable1: "PicachuUu", personaje: "Mario Bros"},
+      chat: {
+        endpoint: { 
+                    url: "http://localhost:11434/api/generate", 
+                    body: {  
+                      model: "phi3", 
+                      stream: false
+                    }, 
+                     // beforeAllPrompts: "ESTOY ENFADADO ", 
+                     // afterAllPrompts: " responde rápido",
+                      beforeFirstPrompt: "Juguemos a un juego, debes responder como si fueras Mario Bros, de los videojuegos\n",
+                    },
+        email: { 
+          endpoint: 'http://localhost:3003/send-email',
+          //to:"mic@ggmail.com",
+          //subject:"Mi Subject",
+          extra: {user: "miusuario", password: "mipassword"} // se envía sin alterar ni cambiar nada
+        },
+        welcome: "Hola pica",
+        color: "#fhtyur",
+        icon: "fa fa-robot",
+        name: "Mi-ChatGpt",
+        buttons: [
+          { type: "button", editable: false, prompt: "Hola ${personaje}" },
+          { type: "button", editable: false, prompt: "Hola ${variable1}" },
+          { type: "button", editable: false, prompt: "ReHola" },
+          { type: "button", editable: true, prompt: "Rehola\n me llamo ${variable1}" },
+          { type: "button", editable: true, prompt: "¿Cómo estás?\nhola\nhola\nhola\n  hola\n             hola" }
+        ]
+      }
+    };
+    
+    console.log(JSON.stringify(config));
+    chatoUI.setAttribute('configuration', JSON.stringify(config));
+  });
+  */
+</script>
+
+
+</html>

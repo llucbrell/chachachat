@@ -1,0 +1,7 @@
+
+POST http://localhost:11434/api/generate
+
+{
+    "model":"phi3",
+    "prompt":"hola que tal"
+}
